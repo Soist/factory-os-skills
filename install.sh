@@ -93,11 +93,17 @@ if [ -d "$FACTORY_OS_DIR" ]; then
     # Add skillsDir to settings (using jq if available, else sed)
     if command -v jq &> /dev/null; then
         temp_file=$(mktemp)
-        jq '.skillsDir |= . + ["~/factory-os-skills/"] | unique' "$SETTINGS_FILE" > "$temp_file"
+        # Handle both empty and non-empty JSON files
+        if [ "$(cat "$SETTINGS_FILE")" = "{}" ] || [ -z "$(grep skillsDir "$SETTINGS_FILE")" ]; then
+            jq '.skillsDir = ["~/.claude/skills", "~/factory-os-skills/"]' "$SETTINGS_FILE" > "$temp_file"
+        else
+            jq '.skillsDir += ["~/factory-os-skills/"] | .skillsDir |= unique' "$SETTINGS_FILE" > "$temp_file"
+        fi
         mv "$temp_file" "$SETTINGS_FILE"
         echo -e "${GREEN}✓ Updated $FACTORY_OS_DIR/.claude/settings.json${NC}"
     else
-        echo -e "${YELLOW}⚠ jq not found, please manually add skillsDir to $SETTINGS_FILE${NC}"
+        echo -e "${YELLOW}⚠ jq not found, please manually add this to $SETTINGS_FILE:${NC}"
+        echo '  {"skillsDir": ["~/.claude/skills", "~/factory-os-skills/"]}'
     fi
 fi
 
