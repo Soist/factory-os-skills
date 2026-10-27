@@ -51,7 +51,7 @@ cd ~/factory-os-skills
 
 ## 配置
 
-factory-os 仓库的 `.claude/settings.json` 已配置自动加载这些 skills（Claude Code CLI & Desktop）：
+factory-os 仓库的 `.claude/settings.json` 配置自动加载这些 skills（Claude Code CLI & Desktop）：
 
 ```json
 {
@@ -59,9 +59,7 @@ factory-os 仓库的 `.claude/settings.json` 已配置自动加载这些 skills�
 }
 ```
 
-对于 Codex（VS Code 等 IDE），symlink 会自动同步到 `~/.codex/skills/`。
-
-（新装的话 install.sh 会自动设置）
+（运行 install.sh 会自动设置）
 
 ## 使用示例
 
@@ -79,7 +77,7 @@ factory-os 仓库的 `.claude/settings.json` 已配置自动加载这些 skills�
 
 ### Codex（VS Code / IDE）
 
-在 Claude 对话侧边栏中调用 skills（同样支持 `/` 命令），symlink 已自动同步到 `~/.codex/skills/`。
+在 Claude 对话侧边栏中调用 skills（同样支持 `/` 命令）。
 
 ## 常见问题
 

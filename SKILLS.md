@@ -385,7 +385,7 @@ factory-os 是多会话项目，用以下 skills 保持同步：
 
 ## 查看完整 Skill 说明
 
-每个 skill 在 `~/team-skills/<name>/SKILL.md` 有详细说明。symlink 后也在本仓库对应目录下。
+每个 skill 的详细说明都在本仓库对应目录下：
 
 ```bash
 cat ~/factory-os-skills/bug-fix/SKILL.md
