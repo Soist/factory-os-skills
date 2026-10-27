@@ -43,14 +43,10 @@ SKILLS=(
     "fix-and-unify"
     "code-placement"
     "feishu-sync"
-    "feishu-meeting-note"
-    "customer-deck"
 
     # Supplementary (⭐)
     "negative-code-audit"
     "implementation-path-audit"
-    "docx-watermark"
-    "writing-style"
     "concept-diagram"
     "daily-recap"
     "feishu-task-delivery"

@@ -237,41 +237,6 @@ npx playwright test web/e2e/landing.spec.ts
 
 ---
 
-### feishu-meeting-note — 会议录音 → 纪要
-**用途**：本地会议录音（m4a/mp3）→ 转写 → 纪要 → 飞书文档。
-
-**触发**：`/feishu-meeting-note [音频文件]`
-
-**流程**：
-1. mlx-whisper 转写（Apple Silicon，自动缓存模型）
-2. 人工补正、写纪要 markdown
-3. 上传飞书文档
-
-**需要**：
-- 飞书凭证（`~/.config/feishu/secrets.env`）
-- mlx-whisper（自动检查）
-- 纪要模板参考（在 skill 内）
-
----
-
-### customer-deck — 客户汇报 HTML deck
-**用途**：技术方案文档 → 对客汇报 HTML deck（可导 PPTX、带水印）。
-
-**触发**：准备向客户汇报技术方案
-
-**场景**：
-- 功能上线汇报
-- 技术架构方案汇报
-- 路演 / 项目启动汇报
-
-**输出**：
-- HTML slide deck（可在浏览器点击翻页）
-- 导出 PPTX
-- 带客户名 watermark
-- 设计系统化（统一色彩、字体、版式）
-
----
-
 ## ⭐ 补充
 
 ### negative-code-audit — 删代码审计
@@ -289,28 +254,6 @@ npx playwright test web/e2e/landing.spec.ts
 - 同一个功能在两个地方有不同实现
 - 某个业务逻辑跨越多个模块，难以维护
 - API 与 service 的职责不清
-
-### docx-watermark — 文档水印
-**用途**：给 .docx 加平铺水印（客户保密文件）。
-
-**用途**：
-```python
-# Python 脚本
-from docx_watermark import add_watermark
-add_watermark("document.docx", "Confidential - XYZ客户", "output.docx")
-```
-
-### writing-style — 中文文案风格
-**用途**：正式商务文档口吻（会议纪要、项目汇报、客户沟通）。
-
-**触发**：写正式文档时，请求调整口吻
-
-**范围**：
-- 商务中文
-- 政务风格
-- 学术论文
-
----
 
 ### concept-diagram — 架构图、流程图
 **用途**：画概念图、流程图、架构图的标准与流程。
@@ -389,8 +332,7 @@ factory-os 是多会话项目，用以下 skills 保持同步：
 
 1. **任务分配**：`/triage` → `/feishu-task-delivery` 记录进度
 2. **文档查阅**：`/feishu-read` 快速查看飞书需求
-3. **会议记录**：`/feishu-meeting-note` 录音转纪要
-4. **日报同步**：`/daily-recap` 向队友汇报一天的改动
+3. **日报同步**：`/daily-recap` 向队友汇报一天的改动
 
 ---
 

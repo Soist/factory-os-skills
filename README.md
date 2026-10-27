@@ -37,8 +37,6 @@ cd ~/factory-os-skills
 | `fix-and-unify` | 修完一处后统一收敛同类问题 |
 | `code-placement` | 代码放置规范 |
 | `feishu-sync` | 飞书 → repo 镜像同步 |
-| `feishu-meeting-note` | 会议录音转纪要 |
-| `customer-deck` | 客户汇报 deck 生成 |
 
 ### ⭐ 补充
 
@@ -46,8 +44,6 @@ cd ~/factory-os-skills
 |---|---|
 | `negative-code-audit` | 删代码审计 |
 | `implementation-path-audit` | 实现路径审计 |
-| `docx-watermark` | 文档水印 |
-| `writing-style` | 中文文案风格 |
 | `concept-diagram` | 架构图、流程图 |
 | `daily-recap` | 日报生成 |
 
