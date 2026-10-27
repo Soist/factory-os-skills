@@ -1,6 +1,6 @@
 # factory-os Skills
 
-factory-os 专用 skills 集合（Claude Code & Codex）。包含代码审计、飞书集成、前端测试、文档交付等开发工具。
+factory-os 专用 skills 集合（Claude Code & Codex）。19 个完整 skills，包含代码审计、飞书集成、前端测试、文档交付等开发工具。
 
 ## 安装
 
@@ -9,9 +9,9 @@ cd ~/factory-os-skills
 ./install.sh
 ```
 
-脚本会 symlink 所有 skills 到 `~/.claude/skills/` 和 `~/.codex/skills/`，并为 factory-os 项目配置专属 skills。
+脚本会为 factory-os 项目配置专属 skills 目录，并在 `~/.claude/settings.json` 中添加 `skillsDir` 指向。
 
-安装后新开会话。
+新开 Claude Code 会话即可使用。
 
 ## Skills 按优先级分类
 

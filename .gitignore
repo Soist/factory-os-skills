@@ -1,24 +1,3 @@
-# Symlinks to team-skills (won't commit)
-triage/
-bug-fix/
-api-audit/
-security-audit/
-error-handling-audit/
-feishu-read/
-frontend-audit/
-playwright-cli/
-cleanup-followthrough/
-post-change-audit/
-fix-and-unify/
-code-placement/
-negative-code-audit/
-implementation-path-audit/
-feishu-sync/
-feishu-task-delivery/
-feishu-todo-enrichment/
-concept-diagram/
-daily-recap/
-
 # System
 .DS_Store
 *.swp
