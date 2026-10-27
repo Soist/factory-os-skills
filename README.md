@@ -1,6 +1,6 @@
 # factory-os Skills
 
-factory-os 专用 Claude Code skills 集合。包含代码审计、飞书集成、前端测试、文档交付等开发工具。
+factory-os 专用 skills 集合（Claude Code & Codex）。包含代码审计、飞书集成、前端测试、文档交付等开发工具。
 
 ## 安装
 
