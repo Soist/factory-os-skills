@@ -24,7 +24,6 @@ cd ~/factory-os-skills
 | `api-audit` | 后端 REST API 审计 |
 | `security-audit` | Web 安全审计（WeChat、权限系统） |
 | `error-handling-audit` | 错误处理审计 |
-| `feishu-read` | 读飞书文档（factory-os 与飞书深度集成） |
 
 ### ⭐⭐ 常用
 
@@ -36,16 +35,19 @@ cd ~/factory-os-skills
 | `post-change-audit` | 大改动后的收口审计 |
 | `fix-and-unify` | 修完一处后统一收敛同类问题 |
 | `code-placement` | 代码放置规范 |
-| `feishu-sync` | 飞书 → repo 镜像同步 |
+| `negative-code-audit` | 删代码审计 |
+| `implementation-path-audit` | 实现路径审计 |
 
 ### ⭐ 补充
 
 | Skill | 说明 |
 |---|---|
-| `negative-code-audit` | 删代码审计 |
-| `implementation-path-audit` | 实现路径审计 |
 | `concept-diagram` | 架构图、流程图 |
 | `daily-recap` | 日报生成 |
+| `feishu-read` | 读飞书文档 |
+| `feishu-sync` | 飞书 → repo 镜像同步 |
+| `feishu-task-delivery` | 飞书任务交付 |
+| `feishu-todo-enrichment` | 飞书待办补全 |
 
 ## team-skills 原仓库
 

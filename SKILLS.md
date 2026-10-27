@@ -102,25 +102,6 @@ factory-os 项目可用的 Claude Code skills。按优先级分类，每个 skil
 
 ---
 
-### feishu-read — 读飞书文档
-**用途**：一次性读取单篇飞书文档（docx → markdown），轻量临时查阅。
-
-**触发**：`/feishu-read [文档 URL]` 或贴飞书文档链接
-
-**场景**：
-- 客户在飞书上发了需求文档，需要快速读取
-- 设计稿、规格说明书在飞书，需要参考
-- 临时查阅，不需要完整的自动同步
-
-**输出**：标准 markdown，可直接复制到 Claude 对话
-
-**优势 vs feishu-sync**：
-- 轻量：一条命令，不需要配置 repo
-- 快速：只读一个文档
-- 临时：适合一次性查阅
-
----
-
 ## ⭐⭐ 常用
 
 ### frontend-audit — 前端审计
@@ -216,29 +197,6 @@ npx playwright test web/e2e/landing.spec.ts
 
 ---
 
-### feishu-sync — 飞书 → repo 镜像同步
-**用途**：飞书云盘文件夹与 repo 的 markdown 单向镜像自动同步。
-
-**触发**：设置一个新客户的资料库
-
-**场景**：
-- 新客户加入，飞书里有工艺规范、样品图片、客户档案
-- 想让 Claude 能读到最新的客户资料，而不用每次都手动复制
-- 自动同步，不用维护两份
-
-**设置**（一次性）：
-```bash
-/feishu-sync --setup
-
-# 指定飞书文件夹 URL 和 repo 目标目录
-```
-
-之后会自动每 30 分钟同步一次（Github Actions）。
-
----
-
-## ⭐ 补充
-
 ### negative-code-audit — 删代码审计
 **用途**：在保持行为的前提下缩减代码与分支。
 
@@ -247,6 +205,8 @@ npx playwright test web/e2e/landing.spec.ts
 - 某段代码太长，想删除不必要的部分
 - 死代码、冗余条件
 
+---
+
 ### implementation-path-audit — 实现路径审计
 **用途**：检查是否有多条实现路径、错误的 owner、逻辑分散。
 
@@ -254,6 +214,29 @@ npx playwright test web/e2e/landing.spec.ts
 - 同一个功能在两个地方有不同实现
 - 某个业务逻辑跨越多个模块，难以维护
 - API 与 service 的职责不清
+
+---
+
+## ⭐ 补充
+
+### feishu-read — 读飞书文档
+**用途**：一次性读取单篇飞书文档（docx → markdown），轻量临时查阅。
+
+**触发**：`/feishu-read [文档 URL]` 或贴飞书文档链接
+
+**场景**：
+- 客户在飞书上发了需求文档，需要快速读取
+- 设计稿、规格说明书在飞书，需要参考
+- 临时查阅，不需要完整的自动同步
+
+**输出**：标准 markdown，可直接复制到 Claude 对话
+
+**优势 vs feishu-sync**：
+- 轻量：一条命令，不需要配置 repo
+- 快速：只读一个文档
+- 临时：适合一次性查阅
+
+---
 
 ### concept-diagram — 架构图、流程图
 **用途**：画概念图、流程图、架构图的标准与流程。
@@ -283,6 +266,27 @@ npx playwright test web/e2e/landing.spec.ts
 - 总结 AI 对话中的关键决策
 - 生成可分享的工作日志
 - 便于老板/团队跟踪进度
+
+---
+
+### feishu-sync — 飞书 → repo 镜像同步
+**用途**：飞书云盘文件夹与 repo 的 markdown 单向镜像自动同步。
+
+**触发**：设置一个新客户的资料库
+
+**场景**：
+- 新客户加入，飞书里有工艺规范、样品图片、客户档案
+- 想让 Claude 能读到最新的客户资料，而不用每次都手动复制
+- 自动同步，不用维护两份
+
+**设置**（一次性）：
+```bash
+/feishu-sync --setup
+
+# 指定飞书文件夹 URL 和 repo 目标目录
+```
+
+之后会自动每 30 分钟同步一次（Github Actions）。
 
 ---
 

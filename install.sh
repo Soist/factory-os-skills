@@ -33,7 +33,6 @@ SKILLS=(
     "api-audit"
     "security-audit"
     "error-handling-audit"
-    "feishu-read"
 
     # Common (⭐⭐)
     "frontend-audit"
@@ -42,13 +41,14 @@ SKILLS=(
     "post-change-audit"
     "fix-and-unify"
     "code-placement"
-    "feishu-sync"
-
-    # Supplementary (⭐)
     "negative-code-audit"
     "implementation-path-audit"
+
+    # Supplementary (⭐)
     "concept-diagram"
     "daily-recap"
+    "feishu-read"
+    "feishu-sync"
     "feishu-task-delivery"
     "feishu-todo-enrichment"
 )
