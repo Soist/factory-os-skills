@@ -51,13 +51,15 @@ cd ~/factory-os-skills
 
 ## 配置
 
-factory-os 仓库的 `.claude/settings.json` 已配置自动加载这些 skills：
+factory-os 仓库的 `.claude/settings.json` 已配置自动加载这些 skills（Claude Code CLI & Desktop）：
 
 ```json
 {
   "skillsDir": ["~/.claude/skills/", "~/factory-os-skills/"]
 }
 ```
+
+对于 Codex（VS Code 等 IDE），symlink 会自动同步到 `~/.codex/skills/`。
 
 （新装的话 install.sh 会自动设置）
 
@@ -106,12 +108,6 @@ cd ~/factory-os-skills
 git pull origin main
 ./install.sh
 ```
-
-## 维护
-
-新增 skills 时，在本仓库对应目录下新建 `SKILL.md`，然后运行 `install.sh`。
-
-Skills 只在本仓库维护一份，team-skills 是上游源。若需要新 skill，请先贡献到 team-skills。
 
 ---
 
