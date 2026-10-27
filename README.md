@@ -97,10 +97,6 @@ EOF
 chmod 600 ~/.config/feishu/secrets.env
 ```
 
-### 某个 skill 依赖（如 mlx-whisper）
-
-`feishu-meeting-note` 需要 `mlx-whisper`，会自动检查并提示安装。
-
 ### 如何更新
 
 ```bash
