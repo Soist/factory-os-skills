@@ -65,22 +65,21 @@ factory-os 仓库的 `.claude/settings.json` 已配置自动加载这些 skills�
 
 ## 使用示例
 
+### Claude Code（CLI / Desktop）
+
+在对话中输入 `/` 然后选择 skill：
+
 ```bash
-# 新 bug 修复，流程化处理
-/bug-fix
-
-# API 设计审计
-/api-audit
-
-# 安全审查
-/security-audit
-
-# 读飞书文档（轻量查阅）
-/feishu-read [文档 URL]
-
-# 编码任务入口
-/triage
+/bug-fix              # 新 bug 修复，流程化处理
+/api-audit            # API 设计审计
+/security-audit       # 安全审查
+/feishu-read [URL]    # 读飞书文档（轻量查阅）
+/triage               # 编码任务入口
 ```
+
+### Codex（VS Code / IDE）
+
+在 Claude 对话侧边栏中调用 skills（同样支持 `/` 命令），symlink 已自动同步到 `~/.codex/skills/`。
 
 ## 常见问题
 
