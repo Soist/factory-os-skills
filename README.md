@@ -49,12 +49,6 @@ cd ~/factory-os-skills
 | `feishu-task-delivery` | 飞书任务交付 |
 | `feishu-todo-enrichment` | 飞书待办补全 |
 
-## team-skills 原仓库
-
-https://github.com/lmanxue/team-skills
-
-共用 skills 库。factory-os-skills 是从中精选的项目子集。
-
 ## 配置
 
 factory-os 仓库的 `.claude/settings.json` 已配置自动加载这些 skills：
